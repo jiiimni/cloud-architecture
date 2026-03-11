@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+info:
+  app:
+    name: cloud-architecture
