@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: cloud-architecture
   profiles:
     active: local
 
@@ -7,7 +9,18 @@ management:
     web:
       exposure:
         include: health,info
+  info:
+    env:
+      enabled: true
 
 info:
   app:
     name: cloud-architecture
+  team-name: ${team-name:}
+
+cloud:
+  aws:
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: dummy-bucket

@@ -2,13 +2,21 @@ spring:
   config:
     activate:
       on-profile: prod
+    import:
+      - aws-parameterstore:/cloud/db/?prefix=spring.datasource.
+      - aws-parameterstore:/cloud/?prefix=
 
   datasource:
-    url: jdbc:mysql://localhost:3306/cloud_architecture
-    username: root
-    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
+
+cloud:
+  aws:
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: cloud-architecture-jimin-profile
