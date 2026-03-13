@@ -44,5 +44,4 @@ jobs:
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cloud-architecture
             sudo docker stop cloud-architecture || true
             sudo docker rm cloud-architecture || true
-            sudo pkill -f 'cloud-architecture-0.0.1-SNAPSHOT.jar' || true
             sudo docker run -d -p 8080:8080 --name cloud-architecture ${{ secrets.DOCKERHUB_USERNAME }}/cloud-architecture
