@@ -269,3 +269,9 @@ GET /api/members/{id}
 - Docker를 이용한 애플리케이션 컨테이너화
 - GitHub Actions를 이용한 CI/CD 자동 배포 파이프라인 구축
 - 코드 Push만으로 서버에 자동 배포되는 환경 구성
+
+
+---  
+## Velog 링크  
+[필수기능] https://velog.io/@jiiim_ni/%EB%82%B4%EC%9D%BC%EB%B0%B0%EC%9B%80%EC%BA%A0%ED%94%84-Spring-3%EA%B8%B0-CH-4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%84%A4%EA%B3%84-%EB%B0%B0%ED%8F%AC-%ED%95%84%EC%88%98-%EA%B8%B0%EB%8A%A5  
+[도전기능] https://velog.io/@jiiim_ni/%EB%82%B4%EC%9D%BC%EB%B0%B0%EC%9B%80%EC%BA%A0%ED%94%84-Spring-3%EA%B8%B0-CH4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%84%A4%EA%B3%84-%EB%B0%B0%ED%8F%AC-%EB%8F%84%EC%A0%84%EA%B8%B0%EB%8A%A5
