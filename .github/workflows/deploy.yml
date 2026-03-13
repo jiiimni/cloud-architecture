@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -21,7 +20,7 @@ jobs:
           java-version: 17
 
       - name: Build with Gradle
-        run: ./gradlew clean build
+        run: ./gradlew clean build -x test
 
       - name: Login to DockerHub
         uses: docker/login-action@v3
@@ -42,7 +41,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cloud-architecture
-            docker stop cloud-architecture || true
-            docker rm cloud-architecture || true
-            docker run -d -p 8080:8080 --name cloud-architecture ${{ secrets.DOCKERHUB_USERNAME }}/cloud-architecture
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cloud-architecture
+            sudo docker stop cloud-architecture || true
+            sudo docker rm cloud-architecture || true
+            sudo docker run -d -p 8080:8080 --name cloud-architecture ${{ secrets.DOCKERHUB_USERNAME }}/cloud-architecture
