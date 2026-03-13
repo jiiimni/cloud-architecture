@@ -26,6 +26,7 @@ public class MemberController {
 
     @GetMapping("/{id}")
     public MemberResponse getMember(@PathVariable Long id) {
+        System.out.println("deploy test");
         return memberService.getMember(id);
     }
 
